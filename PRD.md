@@ -72,3 +72,5 @@ Secondary: email signups for the next reading.
 - **v1.1** — automated fetch for the machine-readable sources (CO2, temperature,
   conflict), scheduled recompute, first time series
 - **v1.2** — historical backfill to 1990, animated series, print edition
+- **v2** — readers can propose additional data sources for consideration in
+  the index
