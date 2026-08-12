@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "methodology_version": "1.0",
+  "computed_at": "REPLACE_ISO_DATE",
+  "index": null,
+  "pillars": [
+    { "id": "existential_risk", "name": "Existential risk", "weight": 0.25 },
+    { "id": "armed_conflict", "name": "Armed conflict", "weight": 0.20 },
+    { "id": "climate_biosphere", "name": "Climate and biosphere", "weight": 0.20 },
+    { "id": "misallocation", "name": "Resource misallocation", "weight": 0.15 },
+    { "id": "epistemic", "name": "Epistemic condition", "weight": 0.10 },
+    { "id": "cooperation", "name": "Cooperation", "weight": 0.10 }
+  ],
+  "indicators": [
+    {
+      "id": "co2",
+      "pillar": "climate_biosphere",
+      "label": "Atmospheric CO\u2082",
+      "unit": "ppm",
+      "anchor_min": 280,
+      "anchor_max": 560,
+      "raw": null,
+      "as_of": null,
+      "source_name": "NOAA Global Monitoring Laboratory",
+      "source_url": null,
+      "retrieved": null,
+      "note": null
+    }
+  ]
+}
