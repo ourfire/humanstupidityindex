@@ -9,9 +9,17 @@ export function SiteFooter() {
         <span>HSI v1.0 · methodology v1.0</span>
       </div>
       <p className="font-body text-mute mt-6 max-w-[62ch] text-sm leading-[1.6]">
-        This first reading was assembled on a compressed timeline by
-        futurable.now. A v2 is planned that will let readers propose
-        additional data sources for the index.
+        This first reading was assembled on a compressed timeline by{" "}
+        <a
+          href="https://futurable.now"
+          target="_blank"
+          rel="noreferrer"
+          className="underline underline-offset-2"
+        >
+          futurable.now
+        </a>
+        . A v2 is planned that will let readers propose additional data
+        sources for the index.
       </p>
     </footer>
   );
