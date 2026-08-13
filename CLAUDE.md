@@ -88,10 +88,31 @@ glassmorphism, or a second accent colour.
 --klein:  #002FA7;  /* International Klein Blue */
 ```
 
-`--klein` is used in exactly one place on the entire site: the cells of the
-lattice that the Cooperation pillar removes. It is the only colour on the page,
-and it is the colour of cooperation. Do not use it for links, buttons, or hover
-states.
+`--klein` is used in the lattice cells that the Cooperation pillar removes,
+and, at 35% opacity, as that pillar's highlighter mark below. It is the colour
+of cooperation everywhere it appears. Do not use it for links, buttons, or
+hover states.
+
+### Pillar highlighter marks
+
+The six pillar names in "Six pillars" each carry a translucent highlighter
+mark behind the name — rough-edged (an SVG turbulence/displacement filter,
+not a clean rectangle), multiplied over the paper like real ink, not a flat
+brand chip. This is the one deliberate exception to "one accent colour": it
+exists purely so a reader can relocate a pillar at a glance, and it must
+never spread beyond that one spot (no marks on indicators, body copy, or
+anywhere else).
+
+```css
+--mark-risk:      #FF4D3D;  /* existential risk — hot red, the alarm colour */
+--mark-conflict:  #FF2D6B;  /* armed conflict — crimson, adjacent to risk */
+--mark-climate:   #B6FF3D;  /* climate and biosphere — acid green */
+--mark-misalloc:  #FFB13D;  /* resource misallocation — amber */
+--mark-epistemic: #C9AEFF;  /* epistemic condition — pastel lavender */
+```
+
+Cooperation keeps `--klein` (at 35% opacity) instead of a sixth new hue, since
+Klein is already its colour in the lattice.
 
 ### Type
 

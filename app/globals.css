@@ -7,6 +7,14 @@
   --color-mute: #6e6e6a;
   --color-klein: #002fa7;
 
+  /* Pillar highlighter marks — used only behind the six pillar names
+     in the "Six pillars" section. See CLAUDE.md, Colour. */
+  --color-mark-risk: #ff4d3d;
+  --color-mark-conflict: #ff2d6b;
+  --color-mark-climate: #b6ff3d;
+  --color-mark-misalloc: #ffb13d;
+  --color-mark-epistemic: #c9aeff;
+
   --font-display: var(--font-archivo), sans-serif;
   --font-body: var(--font-newsreader), serif;
   --font-utility: var(--font-jetbrains-mono), monospace;
