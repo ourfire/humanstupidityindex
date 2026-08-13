@@ -18,6 +18,21 @@ const MARK_ROTATION: Record<string, string> = {
   cooperation: "1deg",
 };
 
+const PILLAR_DESCRIPTION: Record<string, string> = {
+  existential_risk:
+    "How close humanity has pushed itself toward irreversible catastrophe, nuclear war above all.",
+  armed_conflict:
+    "How much organised violence is happening right now, and how many people it has driven from their homes.",
+  climate_biosphere:
+    "How much we have altered the atmosphere, and how much wildlife has vanished as a result.",
+  misallocation:
+    "How much the world spends preparing for war compared with what it spends helping people survive.",
+  epistemic:
+    "How free people are to know the truth and to have a say in how they are governed.",
+  cooperation:
+    "How well governments, institutions, and communities cooperate on the existential risks no single nation can solve alone.",
+};
+
 export function PillarList({ pillars }: { pillars: ScoredPillar[] }) {
   return (
     <dl className="font-utility grid grid-cols-2 gap-x-6 gap-y-4 text-xs tracking-[0.08em] uppercase md:grid-cols-3">
@@ -53,7 +68,10 @@ export function PillarList({ pillars }: { pillars: ScoredPillar[] }) {
             />
             <span className="relative z-10">{pillar.name}</span>
           </dt>
-          <dd className="mt-1 flex items-baseline justify-between text-ink">
+          <p className="font-body text-mute mt-2 text-sm leading-snug normal-case">
+            {PILLAR_DESCRIPTION[pillar.id]}
+          </p>
+          <dd className="mt-2 flex items-baseline justify-between text-ink">
             <span>w {pillar.weight.toFixed(2)}</span>
             <span>{pillar.score.toFixed(1)}</span>
           </dd>

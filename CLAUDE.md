@@ -44,7 +44,8 @@ pnpm test       # vitest, index math only
 ```
 app/
   layout.tsx
-  page.tsx              # the entire site
+  page.tsx              # the landing: number, pillars, indicators, narrative
+  methodology/page.tsx  # the full technical formula, one click from the landing
   opengraph-image.tsx   # dynamic OG carrying the current number
   api/subscribe/route.ts
 lib/
@@ -151,9 +152,13 @@ or a progress bar alongside it.
 
 1. Lattice, full bleed on the grid, with the number set beside it in Display
 2. One paragraph defining the term. Body serif. Nothing else.
-3. The six pillars: name, weight, score. Utility face, aligned to the lattice.
+3. The six pillars: name, weight, score, and a one-line plain-language
+   description of what each measures. Utility face, aligned to the lattice.
 4. The fourteen indicators as a table: value, unit, score, source, date.
-5. Methodology prose, rendered from `METHODOLOGY.md`.
+5. One line — "fourteen numbers, six pillars, one weighted score" — linking
+   to `/methodology`, which renders `METHODOLOGY.md` in full: the anchors,
+   the formula, the tables. The landing stays narrative; the audit trail is
+   one click away, not inline.
 6. Email capture. One field, one verb. Label: "Get the next reading."
 7. Footer: data URL, licence, version string.
 

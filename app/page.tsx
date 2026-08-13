@@ -1,11 +1,11 @@
 import fs from "node:fs";
 import path from "node:path";
+import Link from "next/link";
 import { computeIndex } from "@/lib/index";
 import type { HsiData } from "@/lib/types";
 import { EmailCapture } from "./components/EmailCapture";
 import { IndicatorTable } from "./components/IndicatorTable";
 import { Lattice } from "./components/Lattice";
-import { Methodology } from "./components/Methodology";
 import { PillarList } from "./components/PillarList";
 import { SiteFooter } from "./components/SiteFooter";
 
@@ -66,12 +66,21 @@ export default function Home() {
 
       <section className="mt-20">
         <h2 className="font-display mb-6 text-2xl">Fourteen indicators</h2>
+        <p className="font-body mb-6 max-w-[62ch] text-base leading-[1.6]">
+          The pillar scores above are built from these fourteen numbers.
+          Every one carries its source and the date it refers to.
+        </p>
         <IndicatorTable indicators={result.indicators} />
       </section>
 
-      <section className="mt-20">
-        <h2 className="font-display mb-6 text-2xl">Methodology</h2>
-        <Methodology />
+      <section className="mt-20 max-w-[62ch]">
+        <p className="font-body text-lg leading-[1.6]">
+          Fourteen public numbers, six pillars, one weighted score.{" "}
+          <Link href="/methodology" className="underline underline-offset-2">
+            See exactly how it&apos;s calculated
+          </Link>
+          .
+        </p>
       </section>
 
       <section className="mt-20">
