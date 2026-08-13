@@ -4,7 +4,9 @@ import type { ReactNode } from "react";
 import { parseMarkdown } from "@/lib/markdown";
 
 function renderInline(text: string, keyPrefix: string): ReactNode[] {
-  const parts = text.split(/(\*\*[^*]+\*\*|`[^`]+`)/g).filter(Boolean);
+  const parts = text
+    .split(/(\*\*[^*]+\*\*|`[^`]+`|\[[^\]]+\]\([^)]+\))/g)
+    .filter(Boolean);
   return parts.map((part, index) => {
     const key = `${keyPrefix}-${index}`;
     if (part.startsWith("**") && part.endsWith("**")) {
@@ -15,6 +17,18 @@ function renderInline(text: string, keyPrefix: string): ReactNode[] {
         <code key={key} className="font-utility text-[0.9em]">
           {part.slice(1, -1)}
         </code>
+      );
+    }
+    const linkMatch = /^\[([^\]]+)\]\(([^)]+)\)$/.exec(part);
+    if (linkMatch) {
+      return (
+        <a
+          key={key}
+          href={linkMatch[2]}
+          className="underline underline-offset-2"
+        >
+          {linkMatch[1]}
+        </a>
       );
     }
     return <span key={key}>{part}</span>;
@@ -41,8 +55,12 @@ function Heading({
   );
 }
 
-export function Methodology() {
-  const file = path.join(process.cwd(), "METHODOLOGY.md");
+export function Methodology({
+  file: fileName = "METHODOLOGY.md",
+}: {
+  file?: string;
+}) {
+  const file = path.join(process.cwd(), fileName);
   const source = fs.readFileSync(file, "utf-8");
   const blocks = parseMarkdown(source);
 

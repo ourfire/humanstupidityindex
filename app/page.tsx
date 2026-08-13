@@ -65,17 +65,22 @@ export default function Home() {
       </section>
 
       <section className="mt-20">
-        <h2 className="font-display mb-6 text-2xl">Fourteen indicators</h2>
+        <h2 className="font-display mb-6 text-2xl">
+          {result.indicators.length === 14
+            ? "Fourteen indicators"
+            : `${result.indicators.length} indicators`}
+        </h2>
         <p className="font-body mb-6 max-w-[62ch] text-base leading-[1.6]">
-          The pillar scores above are built from these fourteen numbers.
-          Every one carries its source and the date it refers to.
+          The pillar scores above are built from these numbers. Every one
+          carries its source and the date it refers to.
         </p>
         <IndicatorTable indicators={result.indicators} />
       </section>
 
       <section className="mt-20 max-w-[62ch]">
         <p className="font-body text-lg leading-[1.6]">
-          Fourteen public numbers, six pillars, one weighted score.{" "}
+          {result.indicators.length} public numbers, six pillars, one
+          weighted score.{" "}
           <Link href="/methodology" className="underline underline-offset-2">
             See exactly how it&apos;s calculated
           </Link>
@@ -87,7 +92,10 @@ export default function Home() {
         <EmailCapture />
       </section>
 
-      <SiteFooter />
+      <SiteFooter
+        version={data.version}
+        methodologyVersion={data.methodology_version}
+      />
     </main>
   );
 }

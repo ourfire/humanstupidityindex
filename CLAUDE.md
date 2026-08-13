@@ -18,7 +18,8 @@ it's earned. "HSI" is permitted only in: the `data/hsi.json` filename, the
 version string in the footer, and body copy inside `METHODOLOGY.md` after the
 full name has already been used once on that page.
 
-Version string for the footer: `HSI v1.0 · methodology v1.0`
+Version string for the footer: `HSI v{version} · methodology v{methodology_version}`,
+read from `data/hsi.json` — never hardcode it.
 
 ## Stack
 

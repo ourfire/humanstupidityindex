@@ -26,7 +26,7 @@ const PILLAR_DESCRIPTION: Record<string, string> = {
   climate_biosphere:
     "How much we have altered the atmosphere, and how much wildlife has vanished as a result.",
   misallocation:
-    "How much the world spends preparing for war compared with what it spends helping people survive.",
+    "How much the world spends preparing for war compared with what it spends helping people survive, and how concentrated its wealth has become.",
   epistemic:
     "How free people are to know the truth and to have a say in how they are governed.",
   cooperation:

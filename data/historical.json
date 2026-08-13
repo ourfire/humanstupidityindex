@@ -5113,6 +5113,20 @@
         }
       ],
       "data_quality_note": "This series is NOT annual. It is built almost entirely from a single secondary intermediary -- the 'Worldwide total' row of a Wikipedia table -- which itself states it reproduces Norris & Kristensen, 'Global nuclear weapons inventories, 1945-2010' (Bulletin of the Atomic Scientists, DOI 10.2968/066004008), updated in later columns by unspecified subsequent Kristensen/Norris/SIPRI updates. Direct fetches of the primary journal articles (both the 2010 original and the 2013 Kristensen & Norris 1945-2013 follow-up at tandfonline.com/doi/full/10.1177/0096340213501363) returned HTTP 403 (subscription wall) in this pass -- they were not machine-parsed directly, which is a documented departure from primary-source-only sourcing, disclosed per project rules for this historical layer. The table samples in 5-year steps from 1945-2005 (evenly spaced, likely a genuine reporting cadence of the original NRDC/Bulletin databook rather than gap-filling), then jumps irregularly (2005, 2014, 2020) reflecting whatever later single updates happened to be layered onto the same Wikipedia table over time -- true annual/near-annual values for 2006-2013, 2015-2019, and 2021-2025 were not found and are NOT interpolated here. The 1986 peak point (70,300) comes from a different source (FAS's own page) than the rest of the series and was spot-checked against multiple independent secondary citations (SIPRI, ICAN, Arms Control Association all repeat ~70,000-70,300 for 1986), giving reasonable confidence despite not being independently table-verified. Two points (1995, 2000, 2014) are reported by the source as ranges rather than single figures; midpoints were used and are flagged in each entry's note. Bottom line: good confidence in the shape and rough magnitude of the curve (rapid Cold War buildup to a mid-1980s peak, then steep post-Cold-War decline, then slow decline to today), but this is a coarse skeleton, not a dense annual series, and every non-live-index point here passed through at least one un-fetched secondary layer."
+    },
+    "wealth_concentration": {
+      "indicator_id": "wealth_concentration",
+      "data": [
+        {
+          "year": 2025,
+          "value": 37,
+          "unit": "%",
+          "source_name": "World Inequality Lab, World Inequality Report 2026",
+          "source_url": "https://wir2026.wid.world/insight/executive-summary/",
+          "note": "Top 1% share of global personal wealth. Same figure used in the live data/hsi.json reading."
+        }
+      ],
+      "data_quality_note": "Only one real data point so far -- the World Inequality Report is periodic (roughly every 3-4 years: 2018, 2022, 2026), and WID itself states a reliable GLOBAL wealth-distribution estimate does not exist before roughly 1980; country-level series (e.g. UK, France, US) go back to 1800 but were not gathered here. Needs further research before this can contribute a meaningful historical series -- not yet included in the combined-index sketch."
     }
   },
   "not_available": {

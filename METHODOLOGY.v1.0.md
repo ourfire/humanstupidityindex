@@ -1,8 +1,8 @@
-# Methodology v1.1
+# Methodology v1.0
 
 This document defines the Human Stupidity Index. It is both the implementation
 spec and public content on the site. Changing anything here requires a version
-bump, and old versions stay published. [v1.0 is archived here](/methodology/v1.0).
+bump, and old versions stay published.
 
 ## Definition
 
@@ -75,7 +75,6 @@ The index is reported to one decimal place. Pillar weights sum to 1.
 |---|---|---|---|---|---|---|
 | `mil_gdp` | World military expenditure as share of global GDP | % | 0 | 6 | SIPRI Military Expenditure Database | annual |
 | `mil_oda` | Ratio of world military expenditure to official development assistance | ratio | 0 | 20 | SIPRI + OECD DAC | annual |
-| `wealth_concentration` | Top 1%'s share of global wealth | % | 1 | 70 | World Inequality Lab, World Inequality Report | ~3–4 years |
 
 ### P5 — Epistemic condition (weight 0.10)
 
@@ -105,16 +104,6 @@ This pillar is the counterweight. High cooperation pushes the whole index down.
    and is not corrected for.
 4. **Anchors are defensible, not objective.** They are fixed so that at least
    the bias is constant across readings.
-5. **`wealth_concentration`'s anchor_max is a national extreme, not a global
-   one.** No reliable estimate of the global wealth distribution exists before
-   roughly 1980, so 70% — the most extreme sustained top-1% wealth share
-   documented in any major economy (the United Kingdom, 1914) — is used as a
-   proxy ceiling rather than an observed global maximum.
-
-## Version history
-
-- **v1.1** — added `wealth_concentration` to Resource misallocation.
-- **v1.0** — first published reading. [Archived here](/methodology/v1.0).
 
 ## Data file
 

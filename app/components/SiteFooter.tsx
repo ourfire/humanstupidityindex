@@ -1,4 +1,10 @@
-export function SiteFooter() {
+export function SiteFooter({
+  version = "1.0",
+  methodologyVersion = "1.0",
+}: {
+  version?: string;
+  methodologyVersion?: string;
+}) {
   return (
     <footer className="border-rule mt-16 border-t pt-6 pb-16">
       <div className="font-utility text-mute flex flex-wrap items-center justify-between gap-4 text-xs tracking-[0.08em] uppercase">
@@ -6,7 +12,9 @@ export function SiteFooter() {
           /data/hsi.json
         </a>
         <span>CC BY 4.0</span>
-        <span>HSI v1.0 · methodology v1.0</span>
+        <span>
+          HSI v{version} · methodology v{methodologyVersion}
+        </span>
       </div>
       <p className="font-body text-mute mt-6 max-w-[62ch] text-sm leading-[1.6]">
         This first reading was assembled on a compressed timeline by{" "}

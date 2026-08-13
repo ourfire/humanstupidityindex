@@ -1,5 +1,8 @@
+import fs from "node:fs";
+import path from "node:path";
 import Link from "next/link";
 import type { Metadata } from "next";
+import type { HsiData } from "@/lib/types";
 import { Methodology } from "../components/Methodology";
 import { SiteFooter } from "../components/SiteFooter";
 
@@ -9,7 +12,14 @@ export const metadata: Metadata = {
     "The exact formula behind the Human Stupidity Index: anchors, weights, and pillar computation.",
 };
 
+function loadData(): HsiData {
+  const file = path.join(process.cwd(), "data", "hsi.json");
+  const raw = fs.readFileSync(file, "utf-8");
+  return JSON.parse(raw) as HsiData;
+}
+
 export default function MethodologyPage() {
+  const data = loadData();
   return (
     <main className="mx-auto max-w-[1200px] px-6 py-16">
       <Link
@@ -41,7 +51,10 @@ export default function MethodologyPage() {
         </p>
       </section>
 
-      <SiteFooter />
+      <SiteFooter
+        version={data.version}
+        methodologyVersion={data.methodology_version}
+      />
     </main>
   );
 }

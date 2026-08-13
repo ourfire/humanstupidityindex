@@ -1,6 +1,6 @@
 {
   "version": "1.0",
-  "methodology_version": "1.0",
+  "methodology_version": "1.1",
   "computed_at": "2026-08-12T00:00:00.000Z",
   "index": null,
   "pillars": [
@@ -151,6 +151,20 @@
       "source_url": "https://www.sipri.org/media/press-release/2026/global-military-spending-rise-continues-european-and-asian-expenditures-surge",
       "retrieved": "2026-08-12",
       "note": "Computed as world military expenditure ($2,887bn, SIPRI 2025) divided by total official development assistance ($174.3bn, OECD DAC 2025, preliminary — https://www.oecd.org/en/data/insights/data-explainers/2026/04/a-historic-decline-in-foreign-aid-preliminary-2025-oda-data.html). ODA fell 23.1% year-on-year, the largest annual contraction on record; final revised 2025 ODA figures are due around December 2026."
+    },
+    {
+      "id": "wealth_concentration",
+      "pillar": "misallocation",
+      "label": "Top 1%'s share of global wealth",
+      "unit": "%",
+      "anchor_min": 1,
+      "anchor_max": 70,
+      "raw": 37,
+      "as_of": "2025",
+      "source_name": "World Inequality Lab, World Inequality Report 2026",
+      "source_url": "https://wir2026.wid.world/insight/executive-summary/",
+      "retrieved": "2026-08-13",
+      "note": "Added in methodology v1.1. The top 1% held 37% of global personal wealth in 2025 (top 10% held 75%, bottom 50% held 2%), per the World Inequality Report 2026 (Piketty, Zucman, Chancel et al.), published December 2025. Not annual — the World Inequality Report is published roughly every 3-4 years (prior editions 2018, 2022). anchor_max (70%) is the United Kingdom's 1914 national wealth concentration, the most extreme level documented in the World Inequality Database's long-run series -- no reliable global historical extreme exists, since the World Inequality Lab itself states a global wealth-distribution estimate before roughly 1980 is not reliable."
     },
     {
       "id": "press_freedom",
