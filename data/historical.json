@@ -4954,6 +4954,165 @@
       "indicator_id": "temp_anomaly",
       "data": [],
       "data_quality_note": "NOT RE-RESEARCHED per instructions -- this is the live index's own source (NASA GISTEMP v4, data.giss.nasa.gov/gistemp/tabledata_v4/GLB.Ts+dSST.csv) and it already covers 1880-present, which fully spans the 'back toward 1900' target on its own. No separate historical-extension data file was produced for this indicator; the existing live-data pipeline should just be reused for the historical view as well. BLOCKED: see not_available.temp_anomaly for why this is empty despite the source being real and citable."
+    },
+    "warheads": {
+      "indicator_id": "warheads",
+      "data": [
+        {
+          "year": 1945,
+          "value": 2,
+          "unit": "count",
+          "source_name": "Norris & Kristensen, \"Global nuclear weapons inventories, 1945-2010\", Bulletin of the Atomic Scientists, vol. 66, no. 4 (2010), pp. 77-83, DOI 10.2968/066004008, as tabulated in Wikipedia's \"Historical nuclear weapons stockpiles and nuclear tests by country\" (Worldwide total row)",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Original primary article (sagepub.com/doi/10.2968/066004008, later republished/updated in the 2013 Kristensen & Norris follow-up at tandfonline.com/doi/full/10.1177/0096340213501363) was paywalled and could not be fetched directly (403/subscription wall). Value taken from the Wikipedia 'Worldwide total' row of the reproduced Norris & Kristensen table, which cites that article by name. US-only stockpile for 1945 (2 test/prototype devices) is independently well-documented (Trinity plus the two weapons used on Japan were assembled that year), which cross-checks plausibility of this figure.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1950,
+          "value": 304,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "US 299 + USSR 5 = 304, per the table's own per-country columns for 1950, summed and matching the table's own printed 'Worldwide total' row.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1955,
+          "value": 2636,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "US 2,422 + USSR 200 + UK 14 = 2,636, matching the table's printed total.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1960,
+          "value": 20285,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "US 18,638 + USSR 1,605 + UK 42 = 20,285, matching the table's printed total.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1965,
+          "value": 37741,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "US 31,149 + USSR 6,129 + China 5 + France 32 + UK 436 = 37,741, matching the table's printed total.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1970,
+          "value": 38164,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "US 26,008 + USSR 11,643 + China 75 + France 36 + UK 394 + Israel 8 = 38,164, matching the table's printed total.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1975,
+          "value": 47454,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Sum of all country columns for 1975 as printed in the table, matching the table's own 'Worldwide total' row.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1980,
+          "value": 54409,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Sum of all country columns for 1980 as printed in the table, matching the table's own 'Worldwide total' row.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1985,
+          "value": 61662,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Sum of all country columns for 1985 as printed in the table, matching the table's own 'Worldwide total' row. This is not yet the historical peak -- see the separate 1986 entry below.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1986,
+          "value": 70300,
+          "unit": "count",
+          "source_name": "Federation of American Scientists, Status of World Nuclear Forces",
+          "source_url": "https://fas.org/initiative/status-world-nuclear-forces/",
+          "note": "FAS's current page states the world stockpile 'peaked at approximately 70,300 in 1986' and describes this as the global Cold War high point. 1986 is not one of the 5-year-interval columns in the Norris & Kristensen table above (which jumps 1985 -> 1990), so this point fills that specific gap rather than conflicting with it. Cross-confirmed as a widely repeated figure (SIPRI, ICAN, Arms Control Association all cite ~70,000-70,300 for 1986) via independent web search, though a second primary-source table was not independently fetched for this single point.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1990,
+          "value": 51864,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Table prints this as '~51,864' (approximate). Includes one-off 1991 figures for the newly independent post-Soviet states (Kazakhstan 1,410; Ukraine 2,321; Belarus at least 81; Lithuania 20-60) listed adjacent to the 1990 column in the source table; those are not included in this total since they are dated 1991, not 1990, in the source.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 1995,
+          "value": 38824,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Source table prints a range, '38,823 - 38,825'; value here is the midpoint (38,824), rounded.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 2000,
+          "value": 30972,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Source table prints a range, '30,971 - 30,973'; value here is the midpoint (30,972), rounded.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 2005,
+          "value": 25736,
+          "unit": "count",
+          "source_name": "Norris & Kristensen (2010), Bulletin of the Atomic Scientists, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Single exact figure as printed in the source table.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 2014,
+          "value": 15832,
+          "unit": "count",
+          "source_name": "Kristensen & Norris follow-on updates (post-2010), via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "Source table prints a range, '15,811 - 15,853'; value here is the midpoint (15,832), rounded. This column postdates the original 2010 article and reflects a later update to the same table, not independently traced to a single dated article in this pass.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 2020,
+          "value": 13400,
+          "unit": "count",
+          "source_name": "SIPRI Yearbook / Kristensen & Norris updates, via Wikipedia 'Historical nuclear weapons stockpiles and nuclear tests by country'",
+          "source_url": "https://en.wikipedia.org/wiki/Historical_nuclear_weapons_stockpiles_and_nuclear_tests_by_country",
+          "note": "13,400 matches the figure independently and widely cited by SIPRI/ICAN for 2020 (cross-checked via web search), giving confidence in this specific point beyond the Wikipedia intermediary.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        },
+        {
+          "year": 2026,
+          "value": 12187,
+          "unit": "count",
+          "source_name": "Federation of American Scientists, Nuclear Notebook / Status of World Nuclear Forces",
+          "source_url": "https://fas.org/initiative/status-world-nuclear-forces/",
+          "note": "Same figure and source already used for the live (non-historical) index reading in data/hsi.json -- nine countries, roughly 12,187 warheads, early 2026. Included here to anchor the recent end of the series; FAS's own body text elsewhere on the same page states 12,321.",
+          "published_disclaimer": "Sourced via Wikipedia's reproduction of the Kristensen & Norris figures (Bulletin of the Atomic Scientists), not the original journal article, which is paywalled and could not be fetched directly. Cross-checked by confirming per-country columns sum to the printed world total, but this is one rigor tier below the OWID-style republications used elsewhere in this file -- treat with correspondingly more caution."
+        }
+      ],
+      "data_quality_note": "This series is NOT annual. It is built almost entirely from a single secondary intermediary -- the 'Worldwide total' row of a Wikipedia table -- which itself states it reproduces Norris & Kristensen, 'Global nuclear weapons inventories, 1945-2010' (Bulletin of the Atomic Scientists, DOI 10.2968/066004008), updated in later columns by unspecified subsequent Kristensen/Norris/SIPRI updates. Direct fetches of the primary journal articles (both the 2010 original and the 2013 Kristensen & Norris 1945-2013 follow-up at tandfonline.com/doi/full/10.1177/0096340213501363) returned HTTP 403 (subscription wall) in this pass -- they were not machine-parsed directly, which is a documented departure from primary-source-only sourcing, disclosed per project rules for this historical layer. The table samples in 5-year steps from 1945-2005 (evenly spaced, likely a genuine reporting cadence of the original NRDC/Bulletin databook rather than gap-filling), then jumps irregularly (2005, 2014, 2020) reflecting whatever later single updates happened to be layered onto the same Wikipedia table over time -- true annual/near-annual values for 2006-2013, 2015-2019, and 2021-2025 were not found and are NOT interpolated here. The 1986 peak point (70,300) comes from a different source (FAS's own page) than the rest of the series and was spot-checked against multiple independent secondary citations (SIPRI, ICAN, Arms Control Association all repeat ~70,000-70,300 for 1986), giving reasonable confidence despite not being independently table-verified. Two points (1995, 2000, 2014) are reported by the source as ranges rather than single figures; midpoints were used and are flagged in each entry's note. Bottom line: good confidence in the shape and rough magnitude of the curve (rapid Cold War buildup to a mid-1980s peak, then steep post-Cold-War decline, then slow decline to today), but this is a coarse skeleton, not a dense annual series, and every non-live-index point here passed through at least one un-fetched secondary layer."
     }
   },
   "not_available": {
@@ -4962,7 +5121,6 @@
     "mil_oda": "No real extension exists. Official development assistance as a measured concept did not exist before ~1960-61 (OECD DAC founded 1961).",
     "immunisation": "No real extension exists. WHO's Expanded Programme on Immunization began 1974; no global DTP3-equivalent coverage estimate exists before that.",
     "living_planet": "No real extension exists. Scattered species counts exist but were never assembled into a global index before 1970.",
-    "warheads": "Not researched in this pass. A real extension to 1945 was identified in an earlier research pass (NRDC/Bulletin Nuclear Weapons Databook, Kristensen & Norris) but the actual annual figures were not fetched.",
     "press_freedom": "Not researched in this pass. A real but non-equivalent proxy (Freedom House 'Freedom of the Press', 1980+, different scale than RSF) was identified in an earlier research pass but not fetched.",
     "displaced": "Not researched in this pass. Only fragmentary, non-global, Europe-centric estimates exist before the 1990s (League of Nations Nansen Office refugee records) -- likely too sparse to include reliably even if fetched."
   }
