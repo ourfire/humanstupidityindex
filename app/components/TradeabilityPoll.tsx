@@ -6,7 +6,7 @@ type Status = "idle" | "loading" | "done" | "error";
 type Answer = "yes" | "no";
 
 const QUESTION =
-  "Should this index be tradeable — as a financial derivative, or inside a prediction market, on this site?";
+  "Should this index be tradeable, like a prediction market or a financial derivative, on this site?";
 
 export function TradeabilityPoll() {
   const [status, setStatus] = useState<Status>("idle");
