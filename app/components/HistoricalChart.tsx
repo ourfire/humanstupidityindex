@@ -43,14 +43,17 @@ export function HistoricalChart({
   const y1 = H - PAD_B;
   const yearMin = first.year;
   const yearMax = liveYear;
-  const values = [...points.map((p) => p.value), liveValue];
-  const vMin = Math.min(...values);
-  const vMax = Math.max(...values);
-  const vSpan = vMax - vMin || 1;
 
+  // Fixed to the index's own 0-100 scale, not auto-fit to the observed
+  // data range -- so the empty space above the line is legible as real
+  // headroom before 100 (self-annihilation), not hidden by rescaling.
   const xScale = (year: number) =>
     x0 + ((year - yearMin) / (yearMax - yearMin)) * (x1 - x0);
-  const yScale = (v: number) => y1 - ((v - vMin) / vSpan) * (y1 - y0);
+  const yScale = (v: number) => y1 - (v / 100) * (y1 - y0);
+
+  const SWEEP_DURATION = 1.4;
+  const SWEEP_DELAY = 0.4;
+  const TICK_DELAY = SWEEP_DELAY + SWEEP_DURATION;
 
   const segments = points.slice(0, -1).map((a, i) => {
     const b = points[i + 1] ?? a;
@@ -102,11 +105,25 @@ export function HistoricalChart({
               transition={
                 prefersReducedMotion
                   ? { duration: 0 }
-                  : { duration: 1.4, ease: "easeOut", delay: 0.4 }
+                  : {
+                      duration: SWEEP_DURATION,
+                      ease: "easeOut",
+                      delay: SWEEP_DELAY,
+                    }
               }
             />
           </clipPath>
         </defs>
+        <text
+          x={2}
+          y={y0 + 4}
+          className="font-utility fill-mute text-[10px]"
+        >
+          100
+        </text>
+        <text x={2} y={y1} className="font-utility fill-mute text-[10px]">
+          0
+        </text>
         <g clipPath={`url(#${clipId})`}>
           <line
             x1={x0}
@@ -128,6 +145,34 @@ export function HistoricalChart({
               strokeWidth={s.width}
             />
           ))}
+          {stripSegments.map((s) => (
+            <rect
+              key={s.key}
+              x={s.x}
+              y={stripY}
+              width={s.w}
+              height={STRIP_H}
+              fill="var(--color-ink)"
+              fillOpacity={s.opacity}
+            />
+          ))}
+        </g>
+        <motion.g
+          initial={{ opacity: prefersReducedMotion ? 1 : 0, scale: 0.6 }}
+          animate={{ opacity: 1, scale: 1 }}
+          style={{
+            transformOrigin: `${xScale(liveYear)}px ${yScale(liveValue)}px`,
+          }}
+          transition={
+            prefersReducedMotion
+              ? { duration: 0 }
+              : {
+                  duration: 0.2,
+                  delay: TICK_DELAY,
+                  ease: [0.34, 1.56, 0.64, 1],
+                }
+          }
+        >
           <line
             x1={xScale(last.year)}
             y1={yScale(last.value)}
@@ -143,18 +188,7 @@ export function HistoricalChart({
             r={4}
             fill="var(--color-klein)"
           />
-          {stripSegments.map((s) => (
-            <rect
-              key={s.key}
-              x={s.x}
-              y={stripY}
-              width={s.w}
-              height={STRIP_H}
-              fill="var(--color-ink)"
-              fillOpacity={s.opacity}
-            />
-          ))}
-        </g>
+        </motion.g>
       </svg>
     </div>
   );
