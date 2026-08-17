@@ -14,6 +14,7 @@ import { IndicatorTable } from "./components/IndicatorTable";
 import { Lattice } from "./components/Lattice";
 import { PillarList } from "./components/PillarList";
 import { SiteFooter } from "./components/SiteFooter";
+import { TradeabilityPoll } from "./components/TradeabilityPoll";
 
 function loadData(): HsiData {
   const file = path.join(process.cwd(), "data", "hsi.json");
@@ -117,6 +118,10 @@ export default function Home() {
           </Link>
           .
         </p>
+      </section>
+
+      <section className="mt-20">
+        <TradeabilityPoll />
       </section>
 
       <section className="mt-20">
