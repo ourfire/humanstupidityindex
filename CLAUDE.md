@@ -137,21 +137,36 @@ decoration — it is the same unit as the visualisation. Gutters 24px, max width
 
 ### The signature element
 
-A **10 × 10 lattice of 100 cells**. Each cell is one point of the index. The
-current reading fills that many cells with `--ink`; unfilled cells are 1px
-`--rule` outlines. The cells the Cooperation pillar has removed from the total
-are shown in `--klein` outline in the unfilled region, so the viewer can see
-exactly how much cooperation is subtracting.
+As of v1.1: **the index drawn as a single line, from the earliest year with
+real historical data to the live reading**, in `HistoricalChart.tsx`. Line
+opacity and stroke width encode data coverage — thin and faint where a year
+is built from one pillar out of six, full weight where all six are present —
+and a coverage strip runs beneath the line as the same signal in a second
+form. The live reading joins at the right edge with a `--klein` dashed
+connector and dot, kept visually distinct because it's computed on the full
+six-pillar methodology, not the historical reconstruction's renormalised one
+(METHODOLOGY.md, "Historical reconstruction"). The maths lives in
+`lib/historical.ts`, pure and tested, separate from `lib/index.ts`.
 
-The number *is* the picture. Do not add a gauge, a needle, a dial, a speedometer,
-or a progress bar alongside it.
+Nothing here ticks. There is no live feed to tick from — most indicators
+update annually at best. The chart reveals once, left to right, on load, the
+same one-time honesty the lattice used to have, and otherwise sits still
+until a new reading is published.
 
-**Load sequence:** cells fill in reading order, 8ms apart, ease-out, starting
-400ms after paint. Nothing else on the page animates. Ever.
+The number *is* still the picture underneath the chart. Do not add a gauge, a
+needle, a dial, a speedometer, or a progress bar alongside either of them.
+
+**Load sequence:** the chart reveals left to right over 1.4s, ease-out,
+starting 400ms after paint, via a clip-path animation. Reduced motion shows
+it complete immediately. Nothing else on the page animates. Ever.
+
+v1.0's 10×10 lattice (100 cells, one per index point) still exists in
+`app/components/Lattice.tsx` but is no longer used on the homepage.
 
 ### Page order
 
-1. Lattice, full bleed on the grid, with the number set beside it in Display
+1. The number in Display, with the index-over-time chart beneath it — the
+   chart is context for the number, not a replacement for it.
 2. One paragraph defining the term. Body serif. Nothing else.
 3. The six pillars: name, weight, score, and a one-line plain-language
    description of what each measures. Utility face, aligned to the lattice.

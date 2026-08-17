@@ -111,6 +111,25 @@ This pillar is the counterweight. High cooperation pushes the whole index down.
    documented in any major economy (the United Kingdom, 1914) — is used as a
    proxy ceiling rather than an observed global maximum.
 
+## Historical reconstruction
+
+The homepage chart shows the index across years, built from `data/historical.json`
+rather than the single live reading in `data/hsi.json`. It is a separate,
+lower-confidence artifact, kept apart from the live reading on purpose — most
+of its indicators have no real data before the 2000s, several have none at
+all, and a few are sourced one step removed from the primary publisher, each
+disclosed in that file.
+
+For a given year, only pillars with at least one real indicator value that
+year contribute. Their weights are renormalised proportionally among
+themselves — the same "drop what lacks a source" rule the live index already
+applies to `press_freedom` before 2002, generalised to every pillar and year.
+A year built from one pillar out of six is a much weaker signal than one
+built from all six; the chart marks this directly by drawing the line lighter
+and thinner, and with a coverage strip beneath it, wherever fewer pillars are
+present. This is implemented in `lib/historical.ts`, pure and unit tested
+like `lib/index.ts`, but is not part of the live index's own formula above.
+
 ## Version history
 
 - **v1.1** — added `wealth_concentration` to Resource misallocation.

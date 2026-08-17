@@ -2,10 +2,15 @@ import fs from "node:fs";
 import path from "node:path";
 import Link from "next/link";
 import { computeIndex } from "@/lib/index";
+import {
+  computeHistoricalSeries,
+  extractHistoricalSeries,
+  type HistoricalDataFile,
+} from "@/lib/historical";
 import type { HsiData } from "@/lib/types";
 import { EmailCapture } from "./components/EmailCapture";
+import { HistoricalChart } from "./components/HistoricalChart";
 import { IndicatorTable } from "./components/IndicatorTable";
-import { Lattice } from "./components/Lattice";
 import { PillarList } from "./components/PillarList";
 import { SiteFooter } from "./components/SiteFooter";
 
@@ -15,36 +20,51 @@ function loadData(): HsiData {
   return JSON.parse(raw) as HsiData;
 }
 
+function loadHistoricalData(): HistoricalDataFile {
+  const file = path.join(process.cwd(), "data", "historical.json");
+  const raw = fs.readFileSync(file, "utf-8");
+  return JSON.parse(raw) as HistoricalDataFile;
+}
+
 export default function Home() {
   const data = loadData();
   const result = computeIndex(data);
-  const filled = Math.round(result.index);
-  const cooperation = result.pillars.find((p) => p.id === "cooperation");
-  const removed = cooperation
-    ? Math.round(cooperation.weight * (100 - cooperation.score))
-    : 0;
+  const historicalRaw = loadHistoricalData();
+  const historicalPoints = computeHistoricalSeries(
+    data,
+    extractHistoricalSeries(historicalRaw),
+  );
+  const liveYear = new Date(data.computed_at).getUTCFullYear();
 
   return (
     <main className="mx-auto max-w-[1200px] px-6 py-16">
-      <section className="grid grid-cols-1 items-center gap-10 md:grid-cols-12">
-        <div className="md:col-span-5">
-          <Lattice filled={filled} removed={removed} />
-        </div>
-        <div className="md:col-span-7">
-          <p
-            aria-hidden="true"
-            className="font-utility text-mute mb-2 text-xs tracking-[0.08em] uppercase"
-          >
-            Human Stupidity Index
-          </p>
+      <section>
+        <p
+          aria-hidden="true"
+          className="font-utility text-mute mb-2 text-xs tracking-[0.08em] uppercase"
+        >
+          Human Stupidity Index
+        </p>
+        <div className="flex flex-wrap items-baseline gap-x-6 gap-y-2">
           <h1
             aria-label={`Human Stupidity Index reading: ${result.index.toFixed(1)} out of 100. Zero is large-scale cooperation for the benefit of all. One hundred is self-annihilation of the species.`}
             className="font-display text-ink text-[clamp(3.5rem,12vw,9rem)] leading-none tracking-[-0.03em] [font-stretch:125%]"
           >
             {result.index.toFixed(1)}
           </h1>
-          <p className="font-utility text-mute mt-4 text-xs tracking-[0.08em] uppercase">
+          <p className="font-utility text-mute text-xs tracking-[0.08em] uppercase">
             Reading dated {data.computed_at.slice(0, 10)}
+          </p>
+        </div>
+        <div className="mt-10">
+          <HistoricalChart
+            points={historicalPoints}
+            liveYear={liveYear}
+            liveValue={result.index}
+          />
+          <p className="font-utility text-mute mt-3 text-xs tracking-[0.06em] uppercase">
+            {historicalPoints[0]?.year}–{liveYear} · line opacity marks how
+            many of six pillars have real data that year
           </p>
         </div>
       </section>
