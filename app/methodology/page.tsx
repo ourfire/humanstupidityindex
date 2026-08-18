@@ -38,14 +38,15 @@ export default function MethodologyPage() {
           Who maintains this
         </p>
         {/*
-          TODO: "Alex Moreau" is a placeholder. The real advisor is Peyman
-          Faratin (Krnel) — swap in his real name once he confirms how he
-          wants to be credited. This page is only being shared with a
-          private focus group until then; do not treat this name as final.
+          TODO: "Thomas B. Doyle" is a placeholder -- initials T.B.D. on
+          purpose. The real advisor is Peyman Faratin (Krnel) -- swap in
+          his real name once he confirms how he wants to be credited.
+          This page is only being shared with a private focus group
+          until then; do not treat this name as final.
         */}
         <p className="font-body mt-3 max-w-[62ch] text-base leading-[1.6]">
           The Human Stupidity Index is built and maintained by
-          futurable.now. Alex Moreau advises on AI oversight for the
+          futurable.now. Thomas B. Doyle advises on AI oversight for the
           index — the model-assisted work planned for future versions,
           including any AI-assisted scoring or proposal evaluation.
         </p>
