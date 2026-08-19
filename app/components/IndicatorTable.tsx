@@ -36,8 +36,10 @@ export function IndicatorTable({
               <td className="border-rule text-ink border-b py-2 pr-4">
                 {indicator.raw} {indicator.unit}
               </td>
-              <td className="border-rule text-ink border-b py-2 pr-4">
-                {indicator.score.toFixed(1)}
+              <td className="border-rule text-ink border-b py-2 pr-4 normal-case">
+                <span className="font-numeral text-base tracking-normal">
+                  {indicator.score.toFixed(1)}
+                </span>
               </td>
               <td className="border-rule text-mute border-b py-2 pr-4 normal-case">
                 {indicator.source_url ? (
