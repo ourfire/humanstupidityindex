@@ -4,7 +4,7 @@ import { Methodology } from "../../components/Methodology";
 import { SiteFooter } from "../../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Methodology v1.0 (archived) — Human Stupidity Index",
+  title: "Methodology v1.0 (archived) · Human Stupidity Index",
   description:
     "The first published methodology for the Human Stupidity Index, archived and unchanged.",
 };
@@ -20,7 +20,7 @@ export default function MethodologyV1Page() {
       </Link>
       <div className="border-rule mt-6 mb-10 border p-4">
         <p className="font-utility text-mute text-xs tracking-[0.08em] uppercase">
-          Archived version — no longer live
+          Archived version, no longer live
         </p>
         <p className="font-body mt-2 max-w-[62ch] text-sm leading-[1.6]">
           This is v1.0 exactly as first published, kept for reference. The

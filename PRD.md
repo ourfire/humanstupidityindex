@@ -78,4 +78,5 @@ Secondary: email signups for the next reading.
   conflict), scheduled recompute, first time series
 - **v1.2** — historical backfill to 1990, animated series, print edition
 - **v2** — readers can propose additional data sources for consideration in
-  the index
+  the index (live, write-only intake) and leave anonymous comments (pending
+  a persistence decision, see CLAUDE.md)

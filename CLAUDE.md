@@ -49,6 +49,8 @@ app/
   methodology/page.tsx  # the full technical formula, one click from the landing
   opengraph-image.tsx   # dynamic OG carrying the current number
   api/subscribe/route.ts
+  api/poll/route.ts
+  api/propose/route.ts
 lib/
   index.ts              # normalise, pillar, computeIndex — pure, tested
   types.ts
@@ -197,9 +199,13 @@ lives in `lib/historical.ts`, pure and tested, separate from `lib/index.ts`
    PRD.md), landing on a bordered button linking `/data/hsi.json` — the
    footer keeps the same link too, small, as the standing reference; this
    is the invitation.
-8. The tradeability question. One sentence, Yes/No, `/api/poll` -- no
+8. "Propose a data source" -- a three-field form (source, optional link,
+   reason), `/api/propose` -- write-only intake, logged only, no review
+   queue yet. No account or personal data requested. First piece of the
+   v2 community-proposal roadmap from PRD.md to actually ship.
+9. The tradeability question. One sentence, Yes/No, `/api/poll` -- no
    persistent tally yet, logged only, same honesty as email capture.
-9. Email capture. One field, one verb. Label: "Get the next reading."
-10. Footer: data URL, licence, version string.
+10. Email capture. One field, one verb. Label: "Get the next reading."
+11. Footer: data URL, licence, version string.
 
 No hero image. No testimonials. No FAQ. No card components.

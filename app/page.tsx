@@ -13,6 +13,7 @@ import { HistoricalChart } from "./components/HistoricalChart";
 import { IndicatorTable } from "./components/IndicatorTable";
 import { Lattice } from "./components/Lattice";
 import { PillarList } from "./components/PillarList";
+import { ProposeSource } from "./components/ProposeSource";
 import { SiteFooter } from "./components/SiteFooter";
 import { TradeabilityPoll } from "./components/TradeabilityPoll";
 
@@ -135,8 +136,8 @@ export default function Home() {
         <h2 className="font-display mb-4 text-2xl">Raw data, in full</h2>
         <p className="font-body mb-6 text-lg leading-[1.6]">
           This number is a formula over public data, with fixed anchors
-          and published weights — not an opinion, and nothing here is
-          required to be taken on faith. A mirror that cheats is
+          and published weights. It is not an opinion, and nothing here
+          is required to be taken on faith. A mirror that cheats is
           worthless, so every raw value, every score, every source and
           date behind the reading above is open to inspect, question, or
           recompute independently.
@@ -147,6 +148,17 @@ export default function Home() {
         >
           /data/hsi.json →
         </a>
+      </section>
+
+      <section className="mt-20 max-w-[62ch]">
+        <h2 className="font-display mb-4 text-2xl">Propose a data source</h2>
+        <p className="font-body mb-6 text-lg leading-[1.6]">
+          This index is not finished. If you know a public, sourced number
+          that belongs in it, name it below and say why. No account, no
+          personal data required. Every proposal is read; not every one is
+          added, and additions get a version bump like everything else here.
+        </p>
+        <ProposeSource />
       </section>
 
       <section className="mt-20">

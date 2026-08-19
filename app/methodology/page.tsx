@@ -7,7 +7,7 @@ import { Methodology } from "../components/Methodology";
 import { SiteFooter } from "../components/SiteFooter";
 
 export const metadata: Metadata = {
-  title: "Methodology — Human Stupidity Index",
+  title: "Methodology · Human Stupidity Index",
   description:
     "The exact formula behind the Human Stupidity Index: anchors, weights, and pillar computation.",
 };
@@ -47,7 +47,7 @@ export default function MethodologyPage() {
         <p className="font-body mt-3 max-w-[62ch] text-base leading-[1.6]">
           The Human Stupidity Index is built and maintained by
           futurable.now. Thomas B. Doyle advises on AI oversight for the
-          index — the model-assisted work planned for future versions,
+          index: the model-assisted work planned for future versions,
           including any AI-assisted scoring or proposal evaluation.
         </p>
       </section>
