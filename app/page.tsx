@@ -81,17 +81,10 @@ export default function Home() {
           act on that knowledge together.
         </p>
         <p className="font-body text-lg leading-[1.6]">
-          What is stupidity, then? Perhaps it is not a trait at all.
-          Perhaps it is simply the name for whatever makes a species
-          damage the only vessel it has to live on, and place its own
-          survival at risk, in full view of the knowledge needed to do
-          otherwise.
-        </p>
-        <p className="font-body text-lg leading-[1.6]">
           The Human Stupidity Index measures that. Not individuals, and
-          not intelligence. It measures how much agency our species
-          still holds over the existential risks it has created for
-          itself.
+          not intelligence — it makes no moral claim about any person.
+          It measures how much agency our species still holds over the
+          existential risks it has created for itself.
         </p>
       </section>
 
