@@ -68,13 +68,30 @@ export default function Home() {
         </div>
       </section>
 
-      <section className="mt-20 max-w-[62ch]">
+      <section className="mt-20 max-w-[62ch] space-y-6">
         <p className="font-body text-lg leading-[1.6]">
-          <strong>Stupidity</strong>, here, means behaviour that is
-          collectively self-defeating given available knowledge. Not
-          ignorance — ignorance is not knowing. Stupidity is knowing and
-          proceeding anyway. The index measures the species, not
-          individuals; it makes no moral claim about any person.
+          <strong>Stupidity</strong>, here, is worse than malice. Malice
+          requires intent. Stupidity requires none, which is why it
+          spreads faster and answers to no one.
+        </p>
+        <p className="font-body text-lg leading-[1.6]">
+          Much of it is not a flaw in any individual mind. It is a
+          failure of coordination — what happens when a species
+          understands a risk clearly enough to name it, and still cannot
+          act on that knowledge together.
+        </p>
+        <p className="font-body text-lg leading-[1.6]">
+          What is stupidity, then? Perhaps it is not a trait at all.
+          Perhaps it is simply the name for whatever makes a species
+          damage the only vessel it has to live on, and place its own
+          survival at risk, in full view of the knowledge needed to do
+          otherwise.
+        </p>
+        <p className="font-body text-lg leading-[1.6]">
+          The Human Stupidity Index measures that. Not individuals, and
+          not intelligence. It measures how much agency our species
+          still holds over the existential risks it has created for
+          itself.
         </p>
       </section>
 

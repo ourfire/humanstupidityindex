@@ -173,7 +173,10 @@ lives in `lib/historical.ts`, pure and tested, separate from `lib/index.ts`
 
 1. Lattice, full bleed on the grid, with the number set beside it in Display,
    sized as the hero.
-2. One paragraph defining the term. Body serif. Nothing else.
+2. A short passage defining the term, body serif, nothing else on the
+   page competing with it. As of this text it runs four paragraphs, not
+   one -- a more literary register than the flat institutional voice
+   elsewhere, a deliberate choice, not drift.
 3. The index over time: the line chart described above, its own section.
 4. The six pillars: name, weight, score, and a one-line plain-language
    description of what each measures. Utility face, aligned to the lattice.
