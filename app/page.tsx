@@ -58,7 +58,7 @@ export default function Home() {
           </p>
           <h1
             aria-label={`Human Stupidity Index reading: ${result.index.toFixed(1)} out of 100. Zero is large-scale cooperation for the benefit of all. One hundred is self-annihilation of the species.`}
-            className="font-display text-ink text-[clamp(4.5rem,16vw,13rem)] leading-none tracking-[-0.03em] [font-stretch:125%]"
+            className="font-numeral text-ink text-[clamp(4.5rem,16vw,13rem)] leading-[0.82] tracking-[-0.01em]"
           >
             {result.index.toFixed(1)}
           </h1>

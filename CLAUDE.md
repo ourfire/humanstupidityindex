@@ -119,8 +119,12 @@ Klein is already its colour in the lattice.
 ### Type
 
 - **Display** — Archivo, variable, `wght 800`, `wdth 125`. Expanded ultra-bold
-  grotesque. Used for the index number and the two section heads. Tight tracking
-  (`-0.03em`), never below 48px.
+  grotesque. Used for the section heads. Tight tracking (`-0.03em`), never
+  below 48px.
+- **Numeral** — Anton, 400 (its only weight — already ultra-bold by design).
+  Condensed, not expanded — the opposite proportion from Display, used
+  nowhere else. Reserved for exactly one spot: the hero index number.
+  Tracking `-0.01em`, line-height `0.82` to match its tall caps-height.
 - **Body** — Newsreader, 400/500. A reading serif. Used for all prose. This is
   the introspective register; give it a 62ch measure and 1.6 line height.
 - **Utility** — JetBrains Mono, 400. All numbers-in-tables, source names, dates,

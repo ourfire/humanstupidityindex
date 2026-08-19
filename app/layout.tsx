@@ -1,11 +1,18 @@
 import type { Metadata } from "next";
-import { Archivo, JetBrains_Mono, Newsreader } from "next/font/google";
+import { Anton, Archivo, JetBrains_Mono, Newsreader } from "next/font/google";
 import "./globals.css";
 
 const archivo = Archivo({
   subsets: ["latin"],
   weight: "800",
   variable: "--font-archivo",
+  display: "swap",
+});
+
+const anton = Anton({
+  subsets: ["latin"],
+  weight: "400",
+  variable: "--font-anton",
   display: "swap",
 });
 
@@ -48,7 +55,7 @@ export default function RootLayout({
   return (
     <html
       lang="en"
-      className={`${archivo.variable} ${newsreader.variable} ${jetbrainsMono.variable}`}
+      className={`${archivo.variable} ${anton.variable} ${newsreader.variable} ${jetbrainsMono.variable}`}
     >
       <body className="bg-paper font-body text-ink antialiased">
         {children}

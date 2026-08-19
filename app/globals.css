@@ -18,6 +18,10 @@
   --font-display: var(--font-archivo), sans-serif;
   --font-body: var(--font-newsreader), serif;
   --font-utility: var(--font-jetbrains-mono), monospace;
+
+  /* Anton: the hero index number only. Everything else (section heads,
+     labels, body) stays on --font-display / --font-body / --font-utility. */
+  --font-numeral: var(--font-anton), sans-serif;
 }
 
 html {
