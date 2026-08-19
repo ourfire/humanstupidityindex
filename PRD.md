@@ -59,12 +59,17 @@ Secondary: email signups for the next reading.
 ## Editorial rules
 
 - The site never names a country, a leader, or a party as the cause.
-- The voice is flat, institutional, and unhurried. No jokes. No exclamation marks.
+- The voice is flat, institutional, and unhurried everywhere except the
+  definition passage, which is deliberately more literary — a considered
+  exception, not drift. No jokes. No exclamation marks, anywhere.
 - Every number on the page has a source and a date visible near it.
 - Uncertainty is stated, never hidden.
-- The word "stupidity" appears in the title and is then defined precisely once,
-  as *behaviour that is collectively self-defeating given available knowledge*.
-  After that definition, the site does not editorialise.
+- The word "stupidity" appears in the title and is then defined once, in a
+  short passage near the top of the page (currently three paragraphs; see
+  `METHODOLOGY.md`, "Definition," for the exact current wording — it is
+  versioned and changes there require a version bump). After that
+  definition, the site does not editorialise about causes, blame, or
+  current events.
 
 ## Release plan
 

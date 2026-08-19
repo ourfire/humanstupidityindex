@@ -71,20 +71,21 @@ export default function Home() {
       <section className="mt-20 max-w-[62ch] space-y-6">
         <p className="font-body text-lg leading-[1.6]">
           <strong>Stupidity</strong>, here, is worse than malice. Malice
-          requires intent. Stupidity requires none, which is why it
-          spreads faster and answers to no one.
+          requires intent. Stupidity requires none. That is why it
+          spreads faster than malice, and answers to no one.
         </p>
         <p className="font-body text-lg leading-[1.6]">
           Much of it is not a flaw in any individual mind. It is a
-          failure of coordination — what happens when a species
-          understands a risk clearly enough to name it, and still cannot
-          act on that knowledge together.
+          failure of coordination: a species that understands a risk
+          clearly enough to name it, and still cannot act on that
+          knowledge together.
         </p>
         <p className="font-body text-lg leading-[1.6]">
-          The Human Stupidity Index measures that. Not individuals, and
-          not intelligence — it makes no moral claim about any person.
-          It measures how much agency our species still holds over the
-          existential risks it has created for itself.
+          This index measures that failure. Not intelligence. Not
+          virtue. It makes no moral claim about any person. What it
+          tracks is simpler, and harder to look away from: how much
+          agency our species still holds over the risks it has created
+          for itself, and whether that agency is growing or running out.
         </p>
       </section>
 

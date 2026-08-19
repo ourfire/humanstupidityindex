@@ -1,24 +1,17 @@
-# Methodology v1.2
+# Methodology v1.1
 
 This document defines the Human Stupidity Index. It is both the implementation
 spec and public content on the site. Changing anything here requires a version
-bump, and old versions stay published. [v1.0](/methodology/v1.0) and
-[v1.1](/methodology/v1.1) are archived.
+bump, and old versions stay published. [v1.0 is archived here](/methodology/v1.0).
 
 ## Definition
 
-**Stupidity**, here, is worse than malice. Malice requires intent. Stupidity
-requires none. That is why it spreads faster than malice, and answers to no
-one.
+**Stupidity**, here, means behaviour that is collectively self-defeating given
+available knowledge. Not ignorance — ignorance is not knowing. Stupidity is
+knowing and proceeding anyway.
 
-Much of it is not a flaw in any individual mind. It is a failure of
-coordination: a species that understands a risk clearly enough to name it,
-and still cannot act on that knowledge together.
-
-This index measures that failure. Not intelligence. Not virtue. It makes no
-moral claim about any person. What it tracks is simpler, and harder to look
-away from: how much agency our species still holds over the risks it has
-created for itself, and whether that agency is growing or running out.
+The index measures the species, not individuals. It has no moral claim about any
+person.
 
 ## Scale
 
@@ -139,10 +132,7 @@ like `lib/index.ts`, but is not part of the live index's own formula above.
 
 ## Version history
 
-- **v1.2** — rewrote the Definition in full; no change to indicators,
-  anchors, or weights. [v1.1 archived here](/methodology/v1.1).
 - **v1.1** — added `wealth_concentration` to Resource misallocation.
-  [Archived here](/methodology/v1.1).
 - **v1.0** — first published reading. [Archived here](/methodology/v1.0).
 
 ## Data file
