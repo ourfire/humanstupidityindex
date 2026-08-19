@@ -131,6 +131,24 @@ export default function Home() {
         </p>
       </section>
 
+      <section className="mt-20 max-w-[62ch]">
+        <h2 className="font-display mb-4 text-2xl">Raw data, in full</h2>
+        <p className="font-body mb-6 text-lg leading-[1.6]">
+          This number is a formula over public data, with fixed anchors
+          and published weights — not an opinion, and nothing here is
+          required to be taken on faith. A mirror that cheats is
+          worthless, so every raw value, every score, every source and
+          date behind the reading above is open to inspect, question, or
+          recompute independently.
+        </p>
+        <a
+          href="/data/hsi.json"
+          className="font-utility border-ink hover:bg-ink hover:text-paper inline-block border px-5 py-3 text-xs tracking-[0.08em] uppercase transition-colors"
+        >
+          /data/hsi.json →
+        </a>
+      </section>
+
       <section className="mt-20">
         <TradeabilityPoll />
       </section>

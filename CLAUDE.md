@@ -186,11 +186,20 @@ lives in `lib/historical.ts`, pure and tested, separate from `lib/index.ts`
 4. The six pillars: name, weight, score, and a one-line plain-language
    description of what each measures. Utility face, aligned to the lattice.
 5. The fourteen indicators as a table: value, unit, score, source, date.
+   The Score column sets its numerals in Anton (see Type, Numeral), a
+   small echo of the hero number.
 6. One line — "fourteen numbers, six pillars, one weighted score" — linking
    to `/methodology`, which renders `METHODOLOGY.md` in full: the anchors,
    the formula, the tables. The landing stays narrative; the audit trail is
    one click away, not inline.
-7. Email capture. One field, one verb. Label: "Get the next reading."
-8. Footer: data URL, licence, version string.
+7. "Raw data, in full" — the transparency case made explicitly (public
+   data, fixed anchors, "a mirror that cheats is worthless," from
+   PRD.md), landing on a bordered button linking `/data/hsi.json` — the
+   footer keeps the same link too, small, as the standing reference; this
+   is the invitation.
+8. The tradeability question. One sentence, Yes/No, `/api/poll` -- no
+   persistent tally yet, logged only, same honesty as email capture.
+9. Email capture. One field, one verb. Label: "Get the next reading."
+10. Footer: data URL, licence, version string.
 
 No hero image. No testimonials. No FAQ. No card components.
