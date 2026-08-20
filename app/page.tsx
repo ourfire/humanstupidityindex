@@ -8,6 +8,7 @@ import {
   type HistoricalDataFile,
 } from "@/lib/historical";
 import type { HsiData } from "@/lib/types";
+import { CommentSection } from "./components/CommentSection";
 import { EmailCapture } from "./components/EmailCapture";
 import { HistoricalChart } from "./components/HistoricalChart";
 import { IndicatorTable } from "./components/IndicatorTable";
@@ -159,6 +160,18 @@ export default function Home() {
           added, and additions get a version bump like everything else here.
         </p>
         <ProposeSource />
+      </section>
+
+      <section className="mt-20 max-w-[62ch]">
+        <h2 className="font-display mb-4 text-2xl">Comments</h2>
+        <p className="font-body mb-6 text-lg leading-[1.6]">
+          Anyone can leave a note here. No account, no email required.
+          Anonymity is the default, not the requirement: give yourself a
+          pseudonym or link a handle if you want one attached, or post as
+          nobody. Every comment gets an automatically generated ID and a
+          timestamp either way.
+        </p>
+        <CommentSection />
       </section>
 
       <section className="mt-20">

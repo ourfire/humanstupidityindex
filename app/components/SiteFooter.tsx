@@ -26,8 +26,8 @@ export function SiteFooter({
         >
           futurable.now
         </a>
-        . Readers can already propose additional data sources for the index,
-        above; a public comments thread is next.
+        . Readers can propose additional data sources for the index and
+        leave comments, above.
       </p>
     </footer>
   );

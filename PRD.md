@@ -78,5 +78,6 @@ Secondary: email signups for the next reading.
   conflict), scheduled recompute, first time series
 - **v1.2** — historical backfill to 1990, animated series, print edition
 - **v2** — readers can propose additional data sources for consideration in
-  the index (live, write-only intake) and leave anonymous comments (pending
-  a persistence decision, see CLAUDE.md)
+  the index (live, write-only intake), and can leave comments, anonymous by
+  default with an optional pseudonym or linked handle (live, backed by
+  Upstash Redis, see CLAUDE.md)

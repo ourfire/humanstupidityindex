@@ -29,6 +29,9 @@ read from `data/hsi.json` — never hardcode it.
 - No component library. The page is fourteen elements; shadcn would be overhead.
 - No charting library in v1.0. The visualisation is hand-written SVG.
 - Deploy: Vercel. Node 20.
+- Comments use Upstash Redis (`@upstash/redis`), the one persistent store in
+  the project. Everything else -- the reading, the historical series, the
+  proposal and poll intake -- stays file-based or log-only.
 
 ## Commands
 
@@ -51,9 +54,12 @@ app/
   api/subscribe/route.ts
   api/poll/route.ts
   api/propose/route.ts
+  api/comments/route.ts
 lib/
   index.ts              # normalise, pillar, computeIndex — pure, tested
   types.ts
+  comments.ts            # Upstash Redis read/write + rate limit, not tested
+                          # like index.ts since it holds no index math
 data/
   hsi.json              # the reading. hand-edited in v1.0.
 public/
@@ -71,7 +77,11 @@ public/
   a source is missing from the data file, the build fails — do not render a
   number without provenance.
 - No analytics that sets cookies. Vercel Analytics only.
-- No client-side data fetching. Everything is static at build time.
+- No client-side data fetching. Everything is static at build time, with one
+  deliberate exception: `CommentSection.tsx` fetches `/api/comments` on
+  mount, since comments have to be readable by other visitors and there is
+  no build-time way to know what a visitor is about to post. Nothing else on
+  the page gets this exception.
 - Accessibility floor: visible keyboard focus, `prefers-reduced-motion` honoured
   (the lattice appears filled instantly instead of animating), the index number
   has an `aria-label` spelling out the scale.
@@ -203,9 +213,14 @@ lives in `lib/historical.ts`, pure and tested, separate from `lib/index.ts`
    reason), `/api/propose` -- write-only intake, logged only, no review
    queue yet. No account or personal data requested. First piece of the
    v2 community-proposal roadmap from PRD.md to actually ship.
-9. The tradeability question. One sentence, Yes/No, `/api/poll` -- no
-   persistent tally yet, logged only, same honesty as email capture.
-10. Email capture. One field, one verb. Label: "Get the next reading."
-11. Footer: data URL, licence, version string.
+9. Comments -- an optional pseudonym/handle field, a body field, and a
+   list of prior comments below, `/api/comments`, backed by Upstash
+   Redis. Anonymous by default (an auto-generated ID plus a timestamp);
+   a pseudonym or linked handle is welcome but never required. This is
+   the one section that fetches client-side after load (see Rules).
+10. The tradeability question. One sentence, Yes/No, `/api/poll` -- no
+    persistent tally yet, logged only, same honesty as email capture.
+11. Email capture. One field, one verb. Label: "Get the next reading."
+12. Footer: data URL, licence, version string.
 
 No hero image. No testimonials. No FAQ. No card components.
